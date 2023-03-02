@@ -1,0 +1,204 @@
+.top-block {
+  margin-bottom: 48px;
+  @include onDesktopScreen {
+    padding: 0 150px;
+  }
+
+  &__img-box {
+    min-height: 301px;
+    background-image: url('../images/hero-image.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  
+    @include onLittleDesktopScreen {
+      height: 553px;
+    }
+  }
+
+  &__aditional {
+    width: 250px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 242, 0, 0.7);
+    border-radius: 50%;
+    font-family: $TrebuchetFont;
+    font-weight: 700;
+    margin: auto;
+
+    @include onTablet {
+      position: absolute;
+      left: 33px;
+      bottom: 33px;
+    }
+  }
+
+  &__title {
+    font-size: 25px;
+    line-height: 29px;
+    text-align: center;
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: 16px;
+    margin-bottom: 7px;
+  }
+
+  &__code {
+    width: fit-content;
+    font-size: 24px;
+    line-height: 28px;
+    color: #FFFFFF;
+    background-color: #000000;
+    padding: 0 4px;
+  }
+
+  &__info-block {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 23px 15px;
+    position: relative;
+  }
+
+  &__info-hotel {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 27px;
+    gap: 10px;
+
+    @include onLittleDesktopScreen {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &__hotel-name, .top-block__price {
+    font-family: $TrebuchetFont;
+    font-size: 25px;
+
+    @include onTablet  {
+      font-size: 35px;
+    }
+  }
+
+  &__rating-box .stars {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+  }
+
+  &__stars img {
+    font-size: 28px;
+    color: #b5b8b1;
+    transition: all 0.2s;
+    cursor: pointer;
+  }
+
+  &__info-days {
+    position: absolute;
+    width: 101px;
+    right: 10px;
+    top: -12px;
+
+    @include onTablet {
+      right: 123px;
+      width: 144px;
+      top: -25px;
+    }
+    
+   & span:nth-child(1) {
+      font-family: $TrebuchetFont;
+      font-size: 62px;
+      line-height: 50px;
+      color: $greyColor;
+
+      @include onTablet {
+        font-size: 88px;
+        line-height: 102px;
+      }
+    }
+
+   & span:nth-child(2) {
+      font-family: $ArialFont;
+      line-height: 23px;
+      font-size: 22px;
+      
+      @include onTablet {
+        font-size: 30px;
+        line-height: 31px;
+      }
+    }
+  }
+
+  table {
+    font-family: $ArialFont;
+  }
+  
+  th {
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 10px;
+  
+    @include onTablet {
+      font-size: 12px;
+    }
+  }
+  
+  td {
+    font-weight: bold;
+  }
+  
+  tr th:nth-child(1) {
+    padding-right: 15px;
+    text-align: left;
+  }
+  
+  tr th:nth-child(2) {
+    width: 48px;
+    height: 48px;
+    color: #FFFFFF;
+    font-family: $TrebuchetFont;
+    background-color:$turquoiseColor;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+  
+    @include onTablet {
+      font-size: 24px;
+      width: 52px;
+      height: 52px;
+    }
+  }
+  
+  tr th:nth-child(n+3) {
+    padding-left: 5px;
+  
+    @include onTablet {
+      padding-left: 15px;
+    }
+  }
+  
+  td:not(:nth-child(1)){
+    padding-left: 6px;
+  
+    @include onTablet {
+      padding-left: 16px;
+    }
+  }
+  
+  td {
+    font-size: 12px;
+    
+    @include onTablet {
+      font-size: 18px;
+    }
+  }
+}

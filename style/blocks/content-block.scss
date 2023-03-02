@@ -1,0 +1,154 @@
+.content-block {
+  margin-bottom: 50px;
+  padding: 0 20px;
+
+  @include onDesktopScreen {
+    padding: 0 150px;
+    margin-bottom: 64px;
+  }
+
+  article {
+    position: relative;
+  }
+
+  &__title {
+    font-family: $TrebuchetFont;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 130%;
+    margin-bottom: 30px;
+    width: 100%;
+
+    @include onTablet {
+      width: 72%;
+    }
+  }
+
+  &__paragraph {
+    font-family: $ArialFont;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    margin-bottom: 24px;
+    width: 100%;
+
+    @include onTablet {
+      width: 72%;
+    }
+  }
+
+  h3 {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 130%;
+    width: 100%;
+
+    @include onTablet {
+      width: 72%;
+    }
+  }
+
+  h4 {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 130%;
+    margin-bottom: 4px;
+    width: 100%;
+
+    @include onTablet {
+      width: 72%;
+    }
+  }
+
+  .italic {
+    border-left: 8px solid $turquoiseColor;
+    padding-left: 10px;
+    margin-left: 10px;
+
+    @include onTablet {
+      margin-left: 40px;
+    }
+  }
+
+  &__aside {
+    position: absolute;
+    right: 0;
+    bottom: 132px;
+    display: none;
+    width: 220px;
+    height: fit-content;
+    flex-direction: column;
+
+    @include onLittleDesktopScreen {
+      display: flex;
+    }
+
+    & span:nth-child(1) {
+      font-family: $TrebuchetFont;
+      font-size: 100px;
+      line-height: 116px;
+      letter-spacing: -0.05em;
+      color: $greyColor;
+    }
+
+    & span:nth-child(2) {
+      font-family: $ArialFont;
+      font-size: 30px;
+      line-height: 31px;
+      color: #000000;
+      margin-bottom: 4px;
+    }
+
+    & span:nth-child(3) {
+      font-family: $ArialFont;
+      color: $greyColor;
+      font-size: 20px;
+      line-height: 25px;
+    }
+  }
+
+  &__table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: sans-serif;
+    margin-bottom: 24px;
+
+    @include onTablet {
+      width: 72%;
+    }
+  }
+
+  &__thead {
+    width: 100%;
+    background-color: #F7F7F7;
+  }
+
+  &__th {
+    width: 25%;
+    text-align: center;
+    height: 64px;
+  }
+
+  &__tr:not(:last-child) {
+    width: 100% ;
+    border-bottom: 1px solid #E0E0E0;
+    cursor: pointer;
+  }
+
+  &__td {
+    width: 25%;
+    text-align: center;
+    height: 64px;
+  }
+
+  &__list {
+    font-family: $ArialFont;
+    font-size: 14px;
+    line-height: 19px;
+    padding-left: 33px;
+
+    & li:not(last-child) {
+      margin-bottom: 10px;
+    }
+  }
+}

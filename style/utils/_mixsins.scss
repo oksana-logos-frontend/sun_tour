@@ -1,0 +1,17 @@
+@mixin onDesktopScreen {
+  @media (min-width: 1400px) {
+    @content;
+  }
+}
+
+@mixin onLittleDesktopScreen {
+  @media (min-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin onTablet {
+  @media (min-width: 767px) {
+    @content;
+  }
+}
