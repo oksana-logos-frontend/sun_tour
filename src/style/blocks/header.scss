@@ -1,0 +1,54 @@
+.header {
+  min-height: 104px;
+  background-color: $turquoiseColor;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  color: #FFFFFF;
+  font-family: $ArialFont;
+  padding: 20px;
+  margin-bottom: 24px;
+  gap: 15px;
+
+  @include onDesktopScreen {
+    padding: 30px 150px;
+  }
+
+  &__logo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    height: fit-content;
+    min-height: 44px;
+    width: fit-content;
+    font-size: 16px;
+
+    & img {
+      margin-right: 23px;
+    }
+  }
+
+  &__contacts-text{
+    font-family: $ArialFont;
+    color: #FFFFFF;
+    font-size: 16px;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  &__contacts-number {
+    font-size: 30px;
+    text-decoration: none;
+    font-family: $ArialFont;
+    color: #FFFFFF;
+    cursor: pointer;
+  }
+
+  &__sociable {
+    display: flex;
+    min-width: 75px;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+}

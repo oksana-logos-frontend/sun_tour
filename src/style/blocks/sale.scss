@@ -1,0 +1,108 @@
+.sale {
+  margin-bottom: 50px;
+
+  @include onDesktopScreen {
+    padding: 0 150px;
+    margin-bottom: 64px;
+  }
+
+  &__top-block {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 40px 25px;
+    border: 1px solid #E0E0E0;
+    gap: 20px;
+
+    @include onTablet {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  &__on-sale {
+    color: $turquoiseColor;
+    font-family: $ArialFont;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 120%;
+  }
+
+  &__code {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    font-family: $ArialFont;
+
+    & span:nth-child(1) {
+      color: $turquoiseColor;
+      font-size: 14px;
+      text-transform: uppercase;
+      text-transform: uppercase;
+      line-height: 120%;
+    }
+
+    & span:nth-child(2) {
+      font-size: 22px;
+      line-height: 130%;
+      color: #000000;
+    }
+
+    & span:nth-child(3) {
+      font-size: 14px;
+      line-height: 19px;
+      color: #000000;
+    }
+  }
+
+  &__button {
+    width: 224px;
+    height: 47px;
+    border: none;
+    color: white;
+    background: linear-gradient(180deg, #00AAAA 0%, #008BAA 100%);
+    border-radius: 24px;
+    cursor: pointer;
+  }
+
+  &__bottom-block {
+    display: flex;
+    font-family: $ArialFont;
+    justify-content: center;
+    position: relative;
+    border: 1px solid #E0E0E0;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    background-color: #F7F7F7;
+    overflow: hidden;
+    height: 47px;
+    cursor: pointer;
+    transition: height 0.2s ease-in-out;
+  }
+
+  &__more-info {
+    color: $greyColor;
+    height: fit-content;
+    font-size: 13px;
+    line-height: 120%;
+    position: absolute;
+    top: 14px;
+
+    &::after {
+      content: url('../images/arrow.svg');
+      display: block;
+      position: absolute;
+      right: -22px;
+      top: 0;
+    }
+  }
+
+  &__info-content {
+    transform: translateY(17px);
+    position: absolute;
+    top:0;
+    height: 76px;
+    padding: 30px;
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "sun_tour",
+  "source": "src/index.html",
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "scripts": {
+    "lint": "eslint ./src --fix --color",
+    "start": "parcel --open",
+    "build": "parcel build",
+    "deploy": "gh-pages -d src"
+  },
+  "devDependencies": {
+    "eslint": "^8.34.0",
+    "gh-pages": "^5.0.0",
+    "parcel": "^2.8.3"
+  },
+  "dependencies": {}
+}

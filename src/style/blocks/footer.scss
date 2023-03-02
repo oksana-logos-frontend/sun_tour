@@ -1,0 +1,25 @@
+.footer {
+  min-height: 64px;
+ 
+  @include onDesktopScreen {
+    padding: 0 150px;
+  }
+
+  &__block {
+    padding: 20px;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    border-top: 1px solid #E0E0E0;
+  }
+
+  &__sociable {
+    display: flex;
+    flex-wrap: wrap;
+    width: 78px;
+    justify-content: space-between;
+  }
+}
